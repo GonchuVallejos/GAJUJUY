@@ -1,17 +1,18 @@
 body{
   background: #ffffff;
   font-family: 'Lexend Deca', sans-serif;
+  overflow-x: hidden;
 }
 
-.carousel-item {
+.carousel-item{
     height: 65vh;
     min-height: 300px;
     background: no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
-  }
+    background-size: 100%;
+}
 
 .header-logo
 {
@@ -21,7 +22,7 @@ body{
 .header-logo img
 {
    /* height: 60px;*/
-  height: 70px;
+    height: 70px;
     top: -5px;
     position: relative;
 }
@@ -30,9 +31,6 @@ body{
 
 footer
 {
-    /*box-shadow: inset 0 30px 30px -30px #888;
-    padding-top: 20px;
-    background: #fff;*/
    padding-top: 20px;
    font-family: 'Lexend Deca', sans-serif;
 }
@@ -41,7 +39,7 @@ footer
 {
     background: url(../img/silueta_footer.png);
     height: 150px;
-    background-repeat: repeat no-repeat;
+    background-repeat: repeat, no-repeat;
     background-size: 850px;
     background-position-x: 50%;
 }
@@ -131,72 +129,6 @@ footer .copyright
     padding-bottom: 5px;
     text-align: center;
     font-weight: lighter;
-}
-
-footer ul.secciones
-{
-    list-style: none;
-    width: 150px;
-    margin: auto;
-    font-size: 1.1em;
-    padding: 0px;
-    line-height: 1.6;
-    margin-bottom: 35px;
-}
-
-footer ul.secciones li a{
-    color: #ddd;
-    text-decoration: none;
-    font-weight: normal;
-}
-
-footer ul.secciones li a:hover
-{
-    color: #fff;
-}
-
-footer ul.noticias
-{
-    list-style: none;
-    text-align: center;
-    padding: 0px;
-    margin-top: 15px;
-}
-
-footer ul.noticias li
-{
-    height: 43px;
-}
-
-footer ul.noticias li a{
-    color: #ddd;
-    font-size: 1.1em;
-}
-
-footer ul.noticias li a:hover,
-footer ul.noticias li a:focus,
-footer ul.noticias li a:active
-{
-    text-decoration: none;
-    color: #fff;
-}
-
-footer ul.noticias hr
-{   
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border-color: rgba(255, 255, 255, 0.11);
-}
-
-footer ul.noticias .imagen
-{
-    width: 100px;
-    height: 100px;
-    background-size: cover !important;
-    background-position: center !important;
-    display: inline-block;
-    float: left;
-    margin-right: 10px;
 }
 
 footer img.logo-footer
