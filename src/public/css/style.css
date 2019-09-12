@@ -14,6 +14,20 @@ body{
     background-size: 100%;
 }
 
+#carousel-info
+{    
+    position: absolute;
+    z-index: 100;
+    max-width: 30%;
+    color: #fff;
+    background: rgba(0,0,0,0.5);
+    height: 80px;
+    left:0;
+    top: 80%;
+    right: 5%;
+    padding-top: 1em;
+}
+
 .header-logo
 {
     float: left;
@@ -162,3 +176,46 @@ footer h5{
 }
 
 /* FIN FOOTER */
+
+#logo-container
+{    
+    position: absolute;
+    z-index: 100;
+    max-width: 30%;
+    color: #fff;
+    background: rgba(0,0,0,0.5);
+    height: 300px;
+    top: 80%;
+    right: 5%;
+    padding-top: 1em;
+}
+
+#logo-container h2
+{
+    font-size: 1.5em;
+    font-weight: lighter;
+    line-height: 1.5;
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    margin-top: 1em;
+}
+
+#logo-container img.logo
+{
+    width: 220px;
+}
+
+#carousel-info
+{    
+    position: absolute;
+    z-index: 100;
+    max-width: 30%;
+    color: #fff;
+    background: rgba(0,0,0,0.5);
+    height: 80px;
+    left:0;
+    top: 80%;
+    right: 5%;
+    padding-top: 1em;
+}
