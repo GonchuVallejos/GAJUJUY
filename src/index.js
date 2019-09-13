@@ -27,6 +27,7 @@ app.use(express.json());
 
 //Routes
 app.use(require('./routes')); //Entra y busca el archivo index.js por defecto, si tiene otro nombre se tiene que aclarar
+app.use('/informacion', require('./routes/informacion'));
 
 //Public
 app.use(express.static(path.join(__dirname, 'public')));
