@@ -2,7 +2,7 @@
     <h1 class="mt-4 mb-3"> Formulario Solicitud de Información</h1>
     <ol class="breadcrumb">
       <li class="breadcrumb-item">
-        <a href="/">Inicio</a>
+        <a href="/" style="color:#801A1C;">Inicio</a>
       </li>
       <li class="breadcrumb-item active">Formulario</li>
     </ol>
@@ -21,32 +21,137 @@
               </div>
               <div class="col-md-6 mx-auto">
                 <div class="form-group">
-                  <label for="Nombre">Apellido/s</label>
+                  <label for="Apellido">Apellido/s</label>
                   <input type="text" name="apellido" placeholder="Apellido/s" class="form-control">
                   <small>*Obligatorio</small>
                 </div>  
               </div>
               <div class="col-md-4 mx-auto">
                 <div class="form-group">
-                  <label for="Nombre">N° de Documento</label>
+                  <label for="Documento">N° de Documento</label>
                   <input type="text" name="dni" placeholder="DNI" class="form-control">
                   <small>*Obligatorio</small>
                 </div>  
               </div>
               <div class="col-md-4 mx-auto">
                 <div class="form-group">
-                  <label for="Nombre">DNI</label>
+                  <label for="DNI">DNI</label>
                   <input type="file" name="dniFile" id="dniFile" class="form-control-file" accept="image/*, .doc, .docx, .pdf" required>
                   <small>*Obligatorio</small>
                 </div>  
               </div>
               <div class="col-md-4 mx-auto">
                 <div class="form-group">
-                  <label for="Nombre">CUIL</label>
+                  <label for="CUIL">CUIL</label>
                   <input type="file" name="cuilFile" id="cuilFile" class="form-control-file" accept="image/*, .doc, .docx, .pdf" required>
                   <small>*Obligatorio</small>
                 </div>  
               </div>
+            </div>
+          </div>
+        </div>
+        <div class="card w-100">
+          <h4 class="card-header">Datos de Contacto</h4>
+          <div class="card-body">
+            <div class="row card-text">
+              <div class="col-md-4 mx-auto">
+                <div class="form-group">
+                  <label for="Provincia">Provincia</label>
+                  <select class="form-control" id="provincia" name="provincia" onchange="getMunicipios()">
+                    <option value="-1">Seleccione una provincia</option>
+                  </select>
+                  <small>*Obligatorio</small>
+                </div>  
+              </div>
+              <div class="col-md-4 mx-auto">
+                <div class="form-group">
+                  <label for="Municipio">Municipio</label>
+                  <select class="form-control" id="municipio" name="municipio" required>
+                    <option value="-1">Seleccione un municipio</option>
+                  </select>
+                  <small>*Obligatorio</small>
+                </div>  
+              </div>
+              <div class="col-md-4 mx-auto">
+                <div class="form-group">
+                  <label for="CodPostal">CP</label>
+                  <input type="number" name="codpostal" placeholder="Ej. 4600" class="form-control">
+                  <small>*Obligatorio</small>
+                </div>  
+              </div>
+              <div class="col-md-5 mx-auto">
+                <div class="form-group">
+                  <label for="Calle">Calle</label>
+                  <input type="text" name="calle" placeholder="Calle" class="form-control">
+                  <small>*Obligatorio</small>
+                </div>  
+              </div>
+              <div class="col-md-2 mx-auto">
+                <div class="form-group">
+                  <label for="Numcalle">N°</label>
+                  <input type="number" name="numcalle" placeholder="Número" class="form-control">
+                  <small>*Obligatorio</small>
+                </div>  
+              </div>
+              <div class="col-md-2 mx-auto">
+                <div class="form-group">
+                  <label for="Piso">Piso/Dpto</label>
+                  <input type="text" name="pisodpto" placeholder="Piso X - Dpto X" class="form-control">
+                </div>  
+              </div>
+              <div class="col-md-3 mx-auto">
+                <div class="form-group">
+                  <label for="Barrio">Barrio</label>
+                  <input type="text" name="barrio" placeholder="Barrio" class="form-control">
+                  <small>*Obligatorio</small>
+                </div>  
+              </div>
+              <div class="col-md-6 mx-auto">
+                <div class="form-group">
+                  <label for="Email">E-Mail</label>
+                  <input type="email" name="email" placeholder="Ej. email@email.com" class="form-control">
+                  <small>*Obligatorio</small>
+                </div>  
+              </div>
+              <div class="col-md-6 mx-auto">
+                <div class="form-group">
+                  <label for="Telefono">Telefono</label>
+                  <input type="text" name="telefono" placeholder="Telefono" class="form-control">
+                  <small>*Obligatorio</small>
+                </div>  
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card w-100">
+          <h4 class="card-header">Información Solicitada</h4>
+          <div class="card-body">
+            <div class="form-group">
+              <label for="Institucion">Institucion</label>
+              <select class="form-control" id="institucion" name="institucion" required>
+                <option value="-1">Seleccione una institución</option>
+              </select>
+              <small>*Obligatorio</small>
+            </div>
+            <div class="form-group">
+              <label for="Informacion">Información</label>
+              <textarea class="form-control" id="informacion" name="informacion" rows="5"></textarea>
+              <small>*Obligatorio</small>
+            </div>
+          </div>
+        </div>
+        <div class="card w-100">
+          <div class="card-body">
+            <div class="row card-text">
+              <div class="col-md-8 mx-auto">
+                <div class="form-group">
+                  <label for="Institucion" style="text-align: justify;">Acepto recibir las comunicaciones y/o notificaciones que deban realizarse durante el presente trámite en mi correo electrónico con excepción de los actos que nieguen o limiten mi derecho o impongan una obligación y/o impida la continuación del trámite</label>
+                </div>
+              </div>
+              <div class="col-md-4 mx-auto">
+                  <br/>
+              </div>
+              <button class=" g-recaptcha btn mx-auto" data-sitekey="6LeGHbkUAAAAAIixjzhhUPqGesOXoGJnQw2btcak" data-callback='onSubmit' type="submit" style="background-color: #801A1C; color:wheat;">ENVIAR</button>
             </div>
           </div>
         </div>
